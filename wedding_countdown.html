@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivansh & Swati - Countdown</title>
+
+<style>
+body {
+margin: 0;
+font-family: 'Georgia', serif;
+background: linear-gradient(to bottom, #fff6f8, #fdecef);
+text-align: center;
+color: #7a4b4b;
+}
+
+.container {
+padding: 20px;
+}
+
+h1 {
+font-size: 40px;
+margin-top: 20px;
+}
+
+.names {
+font-size: 48px;
+color: #b76e79;
+}
+
+.countdown {
+font-size: 36px;
+margin: 30px 0;
+background: #fff;
+display: inline-block;
+padding: 20px 30px;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.footer {
+margin-top: 30px;
+font-size: 18px;
+}
+
+img {
+width: 250px;
+border-radius: 20px;
+margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>The Countdown to Forever Begins 💍</h1>
+
+<div class="names">Shivansh & Swati</div>
+
+<img src="your-image.jpg" alt="Couple">
+
+<div class="countdown" id="countdown"></div>
+
+<div>
+📅 04 May 2026 <br>
+⏰ 04:00 PM onwards
+</div>
+
+<div class="footer">
+Dharma Resort & Banquet <br>
+Raebareli, Uttar Pradesh
+</div>
+
+</div>
+
+<script>
+var countDownDate = new Date("May 4, 2026 16:00:00").getTime();
+
+var x = setInterval(function() {
+
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+days + " Days " + hours + " Hrs " + minutes + " Min " + seconds + " Sec";
+
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("countdown").innerHTML = "🎉 It's Today!";
+}
+}, 1000);
+</script>
+
+</body>
+</html>
